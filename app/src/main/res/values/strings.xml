@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ScrollMeter</string>
+    <string name="app_tagline">Know Every Swipe. Take Back Your Time.</string>
+    <string name="accessibility_service_label">ScrollMeter Swipe Counter</string>
+    <string name="accessibility_service_description">
+        ScrollMeter uses the AccessibilityService API solely to detect vertical scroll navigation gestures in supported short-form video feeds so you can monitor your daily swipe count and screen time. ScrollMeter does not read personal messages, passwords, or typed text, has no internet permission, and stores all statistics strictly offline on your device.
+    </string>
+    <string name="trademark_disclaimer">
+        ScrollMeter is an independent digital wellbeing utility and is not affiliated with, endorsed by, or sponsored by any third-party video or social media platform. All product and company names are trademarks of their respective holders.
+    </string>
+    <string name="notification_channel_name">Daily Swipe Limit Alerts</string>
+    <string name="notification_channel_desc">Non-intrusive alerts when your configured daily swipe or time threshold is reached.</string>
+</resources>

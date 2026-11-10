@@ -1,0 +1,6 @@
+{
+  "name": "ScrollMeter",
+  "description": "Know every swipe and take back your time with real-time short-video vertical scroll tracking, daily limits, usage analytics, and offline data storage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
