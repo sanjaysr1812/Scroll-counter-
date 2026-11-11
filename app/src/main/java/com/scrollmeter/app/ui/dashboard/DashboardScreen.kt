@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.scrollmeter.app.domain.models.Platform
@@ -105,8 +106,22 @@ fun DashboardScreen(
             }
         }
 
-        // Primary Hero Counter: Total Confirmed Swipes Today
+        // Primary Hero Counter: Total Confirmed Swipes Today (with scale animation on new swipe)
         item {
+            var isPulsing by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(false) }
+            val scale by androidx.compose.animation.core.animateFloatAsState(
+                targetValue = if (isPulsing) 1.18f else 1.0f,
+                animationSpec = androidx.compose.animation.core.tween(durationMillis = 160),
+                label = "confirmedSwipeScale"
+            )
+            androidx.compose.runtime.LaunchedEffect(stats.totalSwipeCount) {
+                if (stats.totalSwipeCount > 0) {
+                    isPulsing = true
+                    kotlinx.coroutines.delay(160)
+                    isPulsing = false
+                }
+            }
+
             Surface(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(16.dp),
@@ -125,7 +140,11 @@ fun DashboardScreen(
                     Text(
                         text = "${stats.totalSwipeCount}",
                         style = MaterialTheme.typography.displayLarge,
-                        color = MaterialTheme.colorScheme.onSurface
+                        color = MaterialTheme.colorScheme.onSurface,
+                        modifier = Modifier.graphicsLayer {
+                            scaleX = scale
+                            scaleY = scale
+                        }
                     )
 
                     LinearProgressIndicator(
