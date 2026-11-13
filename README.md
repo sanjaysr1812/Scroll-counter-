@@ -112,4 +112,4 @@ One accepted vertical feed-navigation event inside the full-screen YouTube Short
 Contributions are welcome! Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ### Good first issue
-- [Expand swipe detection engine unit tests](../../issues/2)
+- [Expand swipe detection engine unit tests](https://github.com/sanjaysr1812/Scroll-counter-/issues/2)
