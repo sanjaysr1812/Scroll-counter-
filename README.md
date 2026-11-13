@@ -1,5 +1,13 @@
 # ScrollMeter — Native Android Short-Video Swipe Tracker
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white" alt="Android" />
+  <img src="https://img.shields.io/badge/Language-Kotlin-7F52FF?logo=kotlin&logoColor=white" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />
+  <img src="https://img.shields.io/badge/Storage-Room%20Database-4479A1" alt="Room Database" />
+</p>
+
+
 **Tagline:** *Know Every Swipe. Take Back Your Time.*
 
 ScrollMeter is a native Android application built with **Kotlin**, **Jetpack Compose (Material 3)**, **Android AccessibilityService API**, **Room Database**, **Kotlin Coroutines & StateFlow**, and **Jetpack DataStore Preferences**.
