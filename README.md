@@ -106,3 +106,10 @@ One accepted vertical feed-navigation event inside the full-screen YouTube Short
 - **App Version Changes:** YouTube and Instagram frequently update their internal view hierarchies and obfuscate resource IDs. `FeedContextDetector` combines resource ID token hints with structural full-screen vertical pager geometry (`containerHeightRatio >= 0.80f`) and overlay exclusion checks.
 - **Uncertain Events:** When an event inside a full-screen container cannot be reliably distinguished from ordinary scrolling, ScrollMeter classifies it as `UNCERTAIN`. Uncertain events are **never silently added** to your confirmed swipe count; they are reported transparently on the Dashboard and in the **Tracking Diagnostics** screen.
 - **OEM Battery Optimization:** Some Android OEMs (Xiaomi MIUI/HyperOS, Samsung OneUI, Oppo ColorOS, Vivo) may suspend background AccessibilityServices unless battery optimization is set to "Unrestricted" for ScrollMeter.
+
+
+## Contributing
+Contributions are welcome! Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+
+### Good first issue
+- [Expand swipe detection engine unit tests](../../issues/2)
